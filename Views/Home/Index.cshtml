@@ -1,0 +1,34 @@
+﻿@model Game
+
+<div classs="text-center">
+<h2>Ristinolla</h2>
+
+@if (!string.IsNullOrEmpty(Model.Winner))
+{
+    <h3>@(Model.Winner == "Tasapeli" ? "Tasapeli" : "Voittaja: " + Model.Winner)</h3>
+}
+
+  
+    <form method="post" asp-action="MakeMove">
+        <table>
+            @for (int i = 0; i < 9; i += 3)
+            {
+                <tr>
+                    @for (int j = i; j < i + 3; j++)
+                    {
+                        <td>
+                            <button type="submit" name="i" value="@j" style="width: 50px; height: 50px">
+                                @Model.Board[j]
+                            </button>
+                        </td>
+                    }
+                </tr>
+            }
+        </table>
+    </form>
+
+	<form asp-action="NewGame">
+        <button type="submit" class="btn btn-primary">Uusi peli</button>
+    </form>
+
+</div>

@@ -1,0 +1,53 @@
+/*html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}*/
+
+/*body {
+  margin-bottom: 60px;
+}*/
+
+body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+}
+
+/* Set the game board to be a maximum of 600px wide and scale down on smaller screens */
+.game-board {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+    /* Make the game cells square and responsive */
+    .game-board td {
+        width: 33.33%;
+        padding-bottom: 33.33%;
+        position: relative;
+    }
+
+    /* Center the game cell content */
+    .game-board button {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 80%;
+        height: 80%;
+        margin: auto;
+        font-size: 2em;
+    }
